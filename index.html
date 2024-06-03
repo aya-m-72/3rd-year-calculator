@@ -5,45 +5,747 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3rd Year Calculator</title>
     <script src="script.js"></script>
-    <style>
-      .btn {
-        cursor: pointer;
-        width:50%;
-        display: block;
-        margin: 0 auto;
-        padding: 8px 16px;
-        border-radius: 12px;
-        background-color: #fe4164;
-        border-color: #c72c48;
-        color: white;
-      }
-      .btn:hover {
-        background-color: #ff878d;
-      }
-      .homeBtn {
-        background-color: #333333;
-        border-color: #474747;
-      }
-      .homeBtn:hover {
-        background-color: #707070;
-      }
-      body {
-        padding: 16px 8px 64px 8px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      }
-      #mainList {
-        display: flex;
-        flex-direction: column;
-        row-gap: 32px;
-        margin: 32px 0;
-      }
-    </style>
+    <link href="styles.css" rel="stylesheet" >
   </head>
   <body>
-    <h1 style="text-align: center">
+    <div id="choose" style="display: none;">
+      <a class="btn" href="?year=1">Year 1</a>
+      <a class="btn" href="?year=3">Year 3</a>
+    </div>
+    <h1 id="label1" style="text-align: center;display: none;">
+      Curriculum credits are according to year 1 handbook 2021/2022
+    </h1>
+    <h1 id="label3" style="text-align: center;display: none;">
       Curriculum credits are according to year 3 handbook 2023/2024
     </h1>
-    <form action="" id="form">
+    
+<form action="" id="form1" style="display: none;">
+      <ul style="list-style: none" id="mainList">
+        <li>
+          AL
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="al"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="al"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="al"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="al"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="al"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          MP
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mp"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mp"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mp"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mp"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mp"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          ML
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ml"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ml"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ml"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ml"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ml"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          EL
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="el"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="el"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="el"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="el"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="el"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          HDTD
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hdtd"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hdtd"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hdtd"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hdtd"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hdtd"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          ET
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="et"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="et"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="et"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="et"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="et"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          SM
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="sm"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="sm"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="sm"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="sm"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="sm"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          MBM
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mbm"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mbm"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mbm"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mbm"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="mbm"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          English
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="english"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="english"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="english"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="english"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="english"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          ECPD
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ecpd"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ecpd"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ecpd"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ecpd"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="ecpd"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          HSF
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hsf"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hsf"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hsf"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hsf"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hsf"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          HR
+          <ul style="list-style: none; padding-left: 24px">
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hr"
+                  value="0.95"
+                />
+                أمتياز</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hr"
+                  value="0.85"
+                />
+                جيد جداََ</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hr"
+                  value="0.75"
+                />
+                جيد</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hr"
+                  value="0.65"
+                />
+                متوسط</label
+              >
+            </li>
+            <li>
+              <label style="cursor: pointer"
+                ><input
+                  style="cursor: inherit"
+                  type="radio"
+                  name="hr"
+                  value="0.55"
+                />
+                مقبول</label
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <button type="submit" class="btn">Submit</button>
+</form>
+
+    <form action="" id="form3" style="display: none;">
       <ul style="list-style: none" id="mainList">
         <li>
           NT
