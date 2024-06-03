@@ -43,7 +43,7 @@ form1.addEventListener("submit", (e) => {
     res.textContent = `${Math.round(result * 10000) / 10000}`
     const homeBtn = document.createElement("button")
     homeBtn.addEventListener("click", () => {
-      window.location.href = "/3rd-year-calculator"
+      window.location.href = "?"
     })
     homeBtn.textContent = "Home"
     homeBtn.className = "btn homeBtn"
@@ -87,7 +87,7 @@ form1.addEventListener("submit", (e) => {
       res.textContent = `${Math.round(result*10000)/10000}`
       const homeBtn = document.createElement('button')
       homeBtn.addEventListener('click',()=>{
-        window.location.href = "/3rd-year-calculator"
+        window.location.href = "?"
       })
       homeBtn.textContent = 'Home'
       homeBtn.className = 'btn homeBtn'
