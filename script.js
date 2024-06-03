@@ -41,10 +41,8 @@ form1.addEventListener("submit", (e) => {
     res.style.textAlign = "center"
     res.style.margin = "48px 0"
     res.textContent = `${Math.round(result * 10000) / 10000}`
-    const homeBtn = document.createElement("button")
-    homeBtn.addEventListener("click", () => {
-      window.location.href = "?"
-    })
+    const homeBtn = document.createElement("a")
+    homeBtn.href = '?year='
     homeBtn.textContent = "Home"
     homeBtn.className = "btn homeBtn"
     document.body.append(label, res, homeBtn)
@@ -85,10 +83,8 @@ form1.addEventListener("submit", (e) => {
       res.style.textAlign = "center"
       res.style.margin = "48px 0"
       res.textContent = `${Math.round(result*10000)/10000}`
-      const homeBtn = document.createElement('button')
-      homeBtn.addEventListener('click',()=>{
-        window.location.href = "?"
-      })
+      const homeBtn = document.createElement('a')
+      homeBtn.href = "?year="
       homeBtn.textContent = 'Home'
       homeBtn.className = 'btn homeBtn'
       document.body.append(label, res,homeBtn)
